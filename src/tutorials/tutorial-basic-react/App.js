@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from './Header';
-import './AppTutorial01.css';
+import './App.css';
 import Home from './Home';
 import Produtos from './Produtos';
 
-const AppTutorial01 = () => {
+const App = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const AppTutorial01 = () => {
   );
 };
 
-export default AppTutorial01;
+export default App;

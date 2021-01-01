@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from './Button';
 import Produto from './Produto';
-import './App.css';
 
 const App = () => {
   const [nomeProduto, setNomeProduto] = React.useState(null);

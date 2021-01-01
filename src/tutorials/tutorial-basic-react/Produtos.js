@@ -1,6 +1,6 @@
 import React from 'react';
 import Titulo from './Titulo';
-import './AppTutorial01.css';
+import './App.css';
 
 // Replique a interface como a apresentada na aula
 // Utilize a array abaixo para mostrar os produtos

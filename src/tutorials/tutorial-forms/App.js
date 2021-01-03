@@ -14,9 +14,13 @@ const App = () => {
     profissao: '',
   };
 
-  const { form, handleSingleChange, handleMultipleChange } = useForm(
-    initialValues,
-  );
+  const {
+    form,
+    error,
+    handleSingleChange,
+    handleMultipleChange,
+    validatesInput,
+  } = useForm(initialValues);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,8 +29,20 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input id="nome" label="Nome" type="text" onChange={handleSingleChange} />
+      <Input
+        id="nome"
+        label="Nome"
+        type="text"
+        onChange={handleSingleChange}
+        onBlur={validatesInput}
+        placeholder="Enter Password"
+        required
+        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+        title="Text must contain: Minimum 8 characters, at least 1 Alphabet and 1 Number"
+        autoComplete="off"
+      />
       <p>Nome: {form.nome}</p>
+      <p>Erros: {error}</p>
       <hr />
       <Radio
         id="cor"

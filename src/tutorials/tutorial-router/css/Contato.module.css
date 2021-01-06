@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: moveToRight 0.3s forwards;
+}
+
+.image img {
+  border-radius: 0.75rem;
+  padding: 100px 40px;
+  margin-right: 24px;
+  background: #dbb;
+  opacity: 0.7;
+  border: 2px solid #caa;
+  width: 240px;
+  height: auto;
+}
+
+.title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.info {
+  font-size: 1rem;
+  padding-top: 10px;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+li::before {
+  width: 20px;
+  height: 12px;
+  content: '';
+  box-shadow: 0px 2px #ddd;
+  position: absolute;
+  left: 2%;
+}
+
+@keyframes moveToRight {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

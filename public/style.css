@@ -15,9 +15,10 @@ html {
   --radius: 0.2rem;
 }
 
-body {
-  margin: 0 15% !important;
-  width: 70%;
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body,

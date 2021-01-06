@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: moveToRight 0.3s forwards;
+}
+
+.item {
+  width: auto;
+  height: auto;
+  flex-basis: 30%;
+  padding-bottom: 50px;
+  border: none !important;
+}
+
+.item a {
+  text-decoration: none;
+  color: black;
+}
+
+.item img {
+  border-radius: 0.75rem;
+}
+
+.title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  padding-top: 10px;
+}
+
+@keyframes moveToRight {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+/* Loader */
+
+.loader {
+  border: 8px solid #ccc;
+  border-top: 8px solid #888;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

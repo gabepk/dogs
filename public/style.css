@@ -16,7 +16,8 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin: 0 15% !important;
+  width: 70%;
 }
 
 body,

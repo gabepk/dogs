@@ -1,0 +1,45 @@
+* {
+  /* To always sum the padding and border to the height and width */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  color: #333;
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: 'Spectral', Georgia;
+  font-family: var(--type-first);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%; /* Stay in the boundaries of its container */
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem; /* 1rem == 16px */
+  font-family: var(--type-first);
+}
+
+.container {
+  max-width: 50rem; /* 800px */
+  padding: 0 1rem;
+  margin: 0 auto; /* Aligns container to the center */
+}

@@ -49,7 +49,7 @@ export const UserStorage = ({ children }) => {
   const userLogout = React.useCallback(
     async function userLogout() {
       setData(null);
-      setLogin(null);
+      setLogin(false);
       setLoginLoading(false);
       setLoginError(false);
       window.localStorage.removeItem('token');
@@ -75,6 +75,8 @@ export const UserStorage = ({ children }) => {
         } finally {
           //setLoginLoading(false);
         }
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();

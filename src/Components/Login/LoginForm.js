@@ -1,45 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Forms/Button';
+import Input from '../Forms/Input';
+import useForm from '../../Hooks/useForm';
+import { UserContext } from '../../UserContext';
 
 const LoginForm = () => {
-  const [username, setUsername] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const username = useForm();
+  const password = useForm();
 
-  function handleSubmit(event) {
+  const { userLogin, loginError, loginLoading } = React.useContext(UserContext);
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
-      .then((json) => {
-        console.log(json);
-      });
+
+    if (username.validate() && password.validate()) {
+      userLogin(username, password);
+    }
   }
 
   return (
     <section>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          placeholder="Username"
-          onChange={({ target }) => setUsername(target.value)}
-        />
-        <input
-          type="text"
-          value={password}
-          placeholder="Password"
-          onChange={({ target }) => setPassword(target.value)}
-        />
-        <button>Go</button>
+        <Input type="text" label="Username" name="username" {...username} />
+        <Input type="password" label="Password" name="password" {...password} />
+        {loginLoading ? (
+          <Button disabled>...Loading</Button>
+        ) : (
+          <Button>Sign in</Button>
+        )}
+        {loginError && <p>{loginError}</p>}
       </form>
 
       <Link to="/login/create">Create</Link>

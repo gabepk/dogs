@@ -12,16 +12,12 @@ export const UserStorage = ({ children }) => {
   const navigate = useNavigate();
 
   async function getUser(token) {
-    try {
-      const { url, options } = USER_GET(token);
-      const response = await fetch(url, options);
-      if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-      const data = await response.json();
-      setData(data);
-      setLogin(true);
-    } catch (err) {
-      setLogin(false);
-    }
+    const { url, options } = USER_GET(token);
+    const response = await fetch(url, options);
+    if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+    const data = await response.json();
+    setData(data);
+    setLogin(true);
   }
 
   async function userLogin(username, password) {
@@ -63,17 +59,16 @@ export const UserStorage = ({ children }) => {
       const token = window.localStorage.getItem('token');
       if (token) {
         try {
-          // setLoginError(null);
-          // setLoginLoading(true);
+          setLoginError(null);
+          setLoginLoading(true);
           const { url, options } = TOKEN_VALIDATE_POST(token);
           const response = await fetch(url, options);
           if (!response.ok) throw new Error('Error: Invalid token');
           await getUser(token);
         } catch (err) {
           userLogout();
-          //setLoginError(err.message);
         } finally {
-          //setLoginLoading(false);
+          setLoginLoading(false);
         }
       } else {
         setLogin(false);

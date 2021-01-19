@@ -17,7 +17,7 @@ const UserHeader = () => {
         setTitle('Post');
         break;
       default:
-        setTitle('My Account');
+        setTitle('Feed');
         break;
     }
   }, [location]);

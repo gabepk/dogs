@@ -39,6 +39,9 @@ input {
   font-family: var(--type-first);
 }
 
+/* The 4 last attributes bellow just inherit the values from the body selector above.
+If this is not set, then the browser will give preference to the user agent stylesheet,
+which are the default values from each browser.  */
 a {
   text-decoration: none;
   color: inherit;

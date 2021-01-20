@@ -18,10 +18,6 @@
   padding: 0.5rem 0;
 }
 
-.login {
-  color: #333;
-}
-
 .login::after {
   content: '';
   display: inline-block;

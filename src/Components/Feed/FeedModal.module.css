@@ -1,0 +1,17 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5); /*makes background 50% darker*/
+  z-index: 1000;
+  padding: 2rem calc(4rem + 15px) 2rem 4rem; /*15px is the scroll bar width*/
+}
+
+@media (max-width: 40rem) {
+  .modal {
+    padding-bottom: 2rem calc(2rem + 15px) 2rem 2rem;
+  }
+}

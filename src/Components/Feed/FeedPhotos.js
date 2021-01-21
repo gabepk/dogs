@@ -11,7 +11,7 @@ const FeedPhotos = ({ setModalPhoto }) => {
 
   React.useEffect(() => {
     async function fetchPhotos() {
-      const { url, options } = PHOTOS_GET({ page: 1, total: 12, user: 0 });
+      const { url, options } = PHOTOS_GET({ page: 1, total: 32, user: 0 });
       const { response, json } = await request(url, options);
       console.log(json);
     }
@@ -23,9 +23,10 @@ const FeedPhotos = ({ setModalPhoto }) => {
   if (data)
     return (
       <ul className={styles.feed}>
-        {data.map((photo) => (
+        {data.map((photo, index) => (
           <FeedPhotosItem
             key={photo.id}
+            index={index}
             photo={photo}
             setModalPhoto={setModalPhoto}
           />

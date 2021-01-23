@@ -1,6 +1,7 @@
 import React from 'react';
 import FeedModal from './FeedModal';
 import FeedPhotos from './FeedPhotos';
+import PropTypes from 'prop-types';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -21,7 +22,6 @@ const Feed = ({ user }) => {
 
         // Load next page when user reaches 75% of the content discovered by scrolling
         if (scroll > height * 0.75 && !wait) {
-          console.log('load');
           setPages((pages) => [...pages, pages.length + 1]);
           wait = true;
           setTimeout(() => {
@@ -55,6 +55,17 @@ const Feed = ({ user }) => {
       {infinity === false && <p>Done</p>}
     </div>
   );
+};
+
+Feed.defaultProps = {
+  user: 0,
+};
+
+Feed.propTypes = {
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
 };
 
 export default Feed;

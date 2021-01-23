@@ -6,6 +6,7 @@ import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../../Helper/Error';
+import Head from '../../Helper/Head';
 
 const LoginCreateAccount = () => {
   const username = useForm();
@@ -18,7 +19,6 @@ const LoginCreateAccount = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     async function createAccount() {
-      console.log(username);
       const { url, options } = USER_POST({
         username: username.value,
         email: email.value,
@@ -32,6 +32,7 @@ const LoginCreateAccount = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Create Account" />
       <h1 className="title">Sign up</h1>
       <form onSubmit={handleSubmit}>
         <Input label="User" type="text" name="username" {...username} />

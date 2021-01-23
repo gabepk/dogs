@@ -4,6 +4,7 @@ import Feed from '../Feed/Feed';
 import { TOKEN_POST } from '../../api';
 import useFetch from '../../Hooks/useFetch';
 import Loading from '../../Helper/Loading';
+import Head from '../../Helper/Head';
 
 const UserProfile = () => {
   const { user } = useParams();
@@ -25,6 +26,7 @@ const UserProfile = () => {
   if (error) {
     return (
       <section className="container mainContainer">
+        <Head title={user} />
         <h1 className="title">{user}</h1>
         {error && error.includes('Nome de usuário desconhecido') ? (
           <p>User not found</p>

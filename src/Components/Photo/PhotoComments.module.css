@@ -10,5 +10,17 @@
 
 .comments li {
   margin-bottom: 0.5rem;
-  list-style: 1.2;
+}
+
+.comments li:focus {
+  background: tomato;
+}
+
+.noComments {
+  display: block;
+  text-align: center;
+  user-select: none;
+  width: 100%;
+  color: #ccc;
+  padding: 0.5rem;
 }

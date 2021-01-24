@@ -57,13 +57,7 @@ const UserPhotoPost = () => {
           name="img"
           onChange={handleImgChange}
         />
-        {loading ? (
-          <Button type="submit" disabled>
-            Loading...
-          </Button>
-        ) : (
-          <Button type="submit">Post</Button>
-        )}
+        {loading ? <Button disabled>Loading...</Button> : <Button>Post</Button>}
         <Error error={error} />
       </form>
 

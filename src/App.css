@@ -104,3 +104,7 @@ a {
 .AppBody {
   flex: 1; /* Will expand and make footer go to the bottom of the page */
 }
+
+.VictoryContainer {
+  height: initial !important;
+}

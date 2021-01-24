@@ -12,7 +12,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin, loginError, loginLoading } = React.useContext(UserContext);
+  const { userLogin, error, loading } = React.useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -28,12 +28,13 @@ const LoginForm = () => {
       <form className={styles.form} action="" onSubmit={handleSubmit}>
         <Input type="text" label="Username" name="username" {...username} />
         <Input type="password" label="Password" name="password" {...password} />
-        {loginLoading ? (
+        {loading ? (
           <Button disabled>...Loading</Button>
         ) : (
           <Button>Sign in</Button>
         )}
-        <Error error={loginError} />
+        {/* TODO: use an API that return more descriptive errors */}
+        <Error error={error && 'Username or Password is incorrect'} />
       </form>
       <Link className={styles.passwordLost} to="/login/passwordlost">
         Forgot the password?

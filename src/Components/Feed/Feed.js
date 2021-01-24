@@ -52,7 +52,11 @@ const Feed = ({ user }) => {
           setInfinity={setInfinity}
         />
       ))}
-      {infinity === false && <p>Done</p>}
+      {infinity === false && (
+        <p style={{ color: '#ccc', textAlign: 'center', margin: '2rem 0' }}>
+          That's all :)
+        </p>
+      )}
     </div>
   );
 };

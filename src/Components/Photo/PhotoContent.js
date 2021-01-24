@@ -23,6 +23,7 @@ const PhotoContent = ({ data, single }) => {
             ) : (
               <Link to={`/profile/${photo.author}`}>@{photo.author}</Link>
             )}
+            {/* TODO: update this if user open photo */}
             <span className={styles.visualizations}>{photo.acessos}</span>
           </p>
           <h1 className="title">

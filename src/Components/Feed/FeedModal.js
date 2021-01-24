@@ -22,6 +22,7 @@ const FeedModal = ({ photo, setModalPhoto }) => {
 
   return (
     <div className={styles.modal} onClick={handleOutsideModalClick}>
+      {/* TODO: Close modal if there's an error. Show bubble error */}
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}

@@ -9,7 +9,6 @@ const FeedPhotosItem = ({ index, photo, setModalPhoto }) => {
 
   return (
     <li
-      className={styles.photo}
       onClick={handleClick}
       className={`${styles.photo} ${
         (index === 0 || index % 12 === 0) && styles.bigPhotoLeft

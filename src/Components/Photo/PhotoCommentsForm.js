@@ -25,6 +25,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
       onSubmit={handleSubmit}
       className={`${styles.form} ${single ? styles.single : ''}`}
     >
+      {/* TODO: fix bug - Not accepting "<" character (and others) */}
       <textarea
         className={styles.textarea}
         id="comment"

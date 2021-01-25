@@ -18,7 +18,7 @@ const LoginPasswordLost = () => {
         login: login.value,
         url: window.location.href.replace('passwordlost', 'passwordreset'),
       });
-      const { response } = await request(url, options);
+      await request(url, options);
     }
   }
 

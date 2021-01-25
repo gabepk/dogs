@@ -1,36 +1,32 @@
-## APP
+## Dogs - A Social Media for your pet
 
-npx create-react-app dogs
-cd dogs
-npm install history react-router-dom@next
+Dogs is a website created for learning purposes, for Complete React - [Origamid](https://www.origamid.com/curso/react-completo/) (An ✨ awesome ✨ course, by the way).
 
-## API
+![Gif Preview](https://gitlab.com/gabepk.ape/dog-social-media/-/blob/master/src/Assets/dog-presentation.gif)
 
-API: https://www.origamid.com/curso/wordpress-rest-api-dogs
-End-points: https://dogsapi.origamid.dev/json/
+### Install & Run
 
-## React
+```
+$ git clone https://gitlab.com/gabepk.ape/dog-social-media.git
+$ cd dog-social-media
+$ npm install
+$ npm run start
+```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## React - Future improvements
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)

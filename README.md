@@ -2,7 +2,7 @@
 
 Dogs is a website created for learning purposes, for Complete React - [Origamid](https://www.origamid.com/curso/react-completo/) (An ✨ awesome ✨ course, by the way).
 
-![Gif Preview](https://gitlab.com/gabepk.ape/dog-social-media/-/blob/master/src/Assets/dog-presentation.gif)
+![Gif Preview](https://gitlab.com/gabepk.ape/dog-social-media/-/raw/master/src/Assets/dogs-presentation.gif)
 
 ### Install & Run
 

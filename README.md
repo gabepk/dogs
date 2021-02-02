@@ -1,14 +1,20 @@
 ## Dogs - A Social Media for your pet
 
-Dogs is a website created for learning purposes, for Complete React - [Origamid](https://www.origamid.com/curso/react-completo/) (An ✨ awesome ✨ course, by the way).
+[Try me 🐶](https://dogs-social-media.herokuapp.com/)
 
-![Gif Preview](https://gitlab.com/gabepk.ape/dog-social-media/-/raw/master/src/Assets/dogs-presentation.gif)
+It's not done yet, I know 🙈. It has a lot of potential, though.
+
+**Dogs** was created for learning purposes, for Complete React - [Origamid](https://www.origamid.com/curso/react-completo/) - an ✨ awesome ✨ course, by the way.
+
+## Roadmap
+
+[TODO]
 
 ### Install & Run
 
 ```
 $ git clone https://gitlab.com/gabepk.ape/dog-social-media.git
-$ cd dog-social-media
+$ cd dogs
 $ npm install
 $ npm run start
 ```

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
@@ -15,7 +15,7 @@ import NotFound from './Components/NotFound';
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <UserStorage>
           <Header />
           <main className="AppBody">
@@ -33,7 +33,7 @@ const App = () => {
           </main>
           <Footer />
         </UserStorage>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

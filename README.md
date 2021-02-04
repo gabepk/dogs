@@ -2,15 +2,12 @@
 
 [Try me 🐶](https://dogs-social-media.herokuapp.com/)
 
-It's not done yet, I know 🙈. It has a lot of potential, though.
+It's not done yet, I know 🙈 It has a lot of potential, though.
 
-**Dogs** was created for learning purposes, for Complete React - [Origamid](https://www.origamid.com/curso/react-completo/) - an ✨ awesome ✨ course, by the way.
+**Dogs** was created for the ✨ awesome ✨  class *Complete React*, at [Origamid](https://www.origamid.com/curso/react-completo/).
 
-## Roadmap
 
-[TODO]
-
-### Install & Run
+## How to Install
 
 ```
 $ git clone https://gitlab.com/gabepk.ape/dog-social-media.git

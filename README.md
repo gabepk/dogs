@@ -2,8 +2,6 @@
 
 [Try me 🐶](https://dogs-social-media.herokuapp.com/)
 
-It's not done yet, I know 🙈 It has a lot of potential, though.
-
 **Dogs** was created for the ✨ awesome ✨  class *Complete React*, at [Origamid](https://www.origamid.com/curso/react-completo/).
 
 
